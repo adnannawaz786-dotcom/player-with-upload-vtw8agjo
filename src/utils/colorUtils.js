@@ -180,6 +180,15 @@ export const hexToRgb = (hex) => {
   } : null;
 };
 
+export const generateSunsetGradient = (ctx, width, height) => {
+  const gradient = ctx.createLinearGradient(0, 0, width, height);
+  gradient.addColorStop(0, '#FF6B35');   // orange
+  gradient.addColorStop(0.5, '#FFD23F'); // yellow
+  gradient.addColorStop(1, '#FF8E9B');   // pink
+  return gradient;
+};
+
+
 /**
  * Get glassmorphism background with sunset colors
  */
